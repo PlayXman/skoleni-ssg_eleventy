@@ -1,0 +1,20 @@
+{
+	"name": "web-steininger",
+	"version": "1.1.0",
+	"scripts": {
+		"build": "eleventy",
+		"serve": "eleventy --serve"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PlayXman/web-steininger.git"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/PlayXman/web-steininger/issues"
+	},
+	"homepage": "http://steininger.tode.cz/",
+	"devDependencies": {
+		"@11ty/eleventy": "^0.9.0"
+	}
+}

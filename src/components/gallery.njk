@@ -1,0 +1,8 @@
+<div class="fotky">
+    <h1>{{ gallery.title }}:</h1>
+
+    {% set path = '/assets/img/fotky/' %}
+    {% for i in range(1, 18) %}
+        <a class="obrazek" href="{{ path }}f{{ i }}.jpg" data-lightbox="fotky" style="background: url('{{ path }}thumbs/f{{ i }}.jpg')"></a>
+    {% endfor %}
+</div>

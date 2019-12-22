@@ -1,0 +1,19 @@
+<div id="pokoje">
+    {% for room in rooms %}
+        {% set id = 'p' + (loop.index) %}
+        <input type="checkbox" name="pok" id="{{id}}" />
+        <label for="{{ id }}">
+            <div class="sipka"></div>
+            <article>
+                <h3>{{ room.title }}</h3>
+                <p>
+                    {{ room.text | safe | nl2br }}
+                </p>
+            </article>
+
+            {% for picture in room.pictures %}
+                <a class="obrazek" href="/assets/img/pokoje/{{ picture }}.jpg" data-lightbox="{{ id }}" style="background: url('/assets/img/pokoje/thumbs/{{ picture }}.jpg')"></a>
+            {% endfor %}
+        </label>
+    {% endfor %}
+</div>

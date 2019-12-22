@@ -1,0 +1,14 @@
+<div class="odkazy">
+    <h1>{{ links.title }}:</h1>
+    <ul>
+        {% set urls = [
+            'http://www.sokolov-pronajem.cz',
+            'http://www.olovi.cz',
+            'http://www.sokolov.cz',
+            'http://www.karlovyvary.cz'
+        ] %}
+        {% for link in links.links %}
+            <li><a href="{{ urls[loop.index0] }}" target="_blank">{{ link }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

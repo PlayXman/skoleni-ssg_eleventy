@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ lang }}" xml:lang="{{ lang }}">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Penzionu Steininger - levné ubytování v útulném penzionu.">
+    <meta name="keywords" content="ubytování, bydlení, přenocování, přespání, volné, volný, pokoj, pokoje, apartmán, apartmány, Oloví, karlovarsko, Česká Republika, penzion, steininger, Kraslice, Sokolov, soukromí, hotel, accommodation, housing, overnight, free, room, rooms, apartment, apartments, Czech Republic, pension, privacy, clean, open, habitation, residence, night, overnight, overnights, stay, stays, available, availability, bedroom, guestroom, suites, house, Karlovy Vary, inn, homes, private, Unterkunft, Unterkuenfte, Übernachtung, Uebernachtung, frei, freie, freien, Zimmer, Wohnung, Wohnungen, Blei, Tschechische Republik, Grazlitz, Falkenau, Datenschutz, Bleistadt, gehause, gehaeuse, Schlafen, raum, ferienwohnung, ruhe, privatleben, wifi, internet, nature, příroda, natur, vald, wälder, waelder">
+    <meta name="author" content="Michael Baroň">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/lightbox.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/dimensions.css" />
+
+    <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/lightbox-2.6.min.js"></script>
+</head>
+
+<body>
+    <div class="pozadi1 pozadi">
+    </div>
+    <div class="pozadi2 pozadi">
+    </div>
+    <div class="pozadi3 pozadi">
+    </div>
+
+    <div class="kontejner">
+        <div class="jazyky">
+            <a href="/" {% if lang == 'cs' %}class="active"{% endif %}><span>CZ</span></a>
+            <a href="/en/" {% if lang == 'en' %}class="active"{% endif %}><span>EN</span></a>
+            <a href="/de/" {% if lang == 'de' %}class="active"{% endif %}><span>DE</span></a>
+        </div>
+        <div class="obsah">
+            {% include "header.njk" %}
+            <article>
+                {{ content | safe }}
+            </article>
+            {% include 'rooms.njk' %}
+            {% include 'contact.njk' %}
+            {% include 'map.njk' %}
+            {% include 'gallery.njk' %}
+            {% include 'links.njk' %}
+
+            <footer>
+                <p>&copy; 2015 DESIGNby<span>MB</span></p>
+            </footer>
+            <endora></endora>
+        </div>
+    </div>
+</body>
+</html>
